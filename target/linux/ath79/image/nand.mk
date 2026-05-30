@@ -328,7 +328,7 @@ define Device/netgear_ath79_nand
   KERNEL_SIZE := 4096k
   BLOCKSIZE := 128k
   PAGESIZE := 2048
-  IMAGE_SIZE := 25600k
+  IMAGE_SIZE := 51200k
   KERNEL := kernel-bin | append-dtb | lzma | \
 	pad-offset $$(BLOCKSIZE) 129 | uImage lzma | pad-extra 1 | \
 	append-uImage-fakehdr filesystem $$(UIMAGE_MAGIC)

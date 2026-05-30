@@ -91,7 +91,7 @@
 
 			ubi@0 {
 				label = "ubi";
-				reg = <0x0 0x7500000>;
+				reg = <0x0 0x7140000>;
 			};
 		};
 	};
@@ -150,29 +150,9 @@
 			};
 		};
 
-		partition@c0000 {
-			label = "pot";
-			reg = <0xc0000 0x80000>;
-		};
-
-		partition@140000 {
-			label = "language";
-			reg = <0x140000 0x200000>;
-		};
-
-		partition@340000 {
-			label = "config";
-			reg = <0x340000 0x80000>;
-		};
-
-		partition@3c0000 {
-			label = "traffic_meter";
-			reg = <0x3c0000 0x300000>;
-		};
-
 		partition@6c0000 {
 			label = "firmware";
-			reg = <0x6c0000 0x1900000>;
+			reg = <0x6c0000 0x3200000>;
 
 			compatible = "fixed-partitions";
 			#address-cells = <1>;
@@ -185,19 +165,13 @@
 
 			ubiconcat0: partition@400000 {
 				label = "ubiconcat0";
-				reg = <0x400000 0x1500000>;
+				reg = <0x400000 0x2e00000>;
 			};
 		};
 
-		partition@1fc0000 {
-			label = "caldata_backup";
-			reg = <0x1fc0000 0x40000>;
-			read-only;
-		};
-
-		ubiconcat1: partition@2000000 {
+		ubiconcat1: partition@38c0000 {
 			label = "ubiconcat1";
-			reg = <0x2000000 0x6000000>;
+			reg = <0x38c0000 0x4740000>;
 		};
 	};
 };
