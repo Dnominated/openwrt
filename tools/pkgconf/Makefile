@@ -29,8 +29,8 @@ MESON_HOST_ARGS += \
 define Host/Install
 	$(call Host/Install/Meson)
 	@pkgconf_src="$(STAGING_DIR_HOST)/bin/pkgconf"; \
-	[ -f "$$pkgconf_src" ] || pkgconf_src="$(HOME)/.openwrt_shared_host/bin/pkgconf"; \
-	install -m0755 "$$pkgconf_src" "$(STAGING_DIR_HOST)/bin/pkg-config.real"
+	[ -f "$$$$pkgconf_src" ] || pkgconf_src="$(HOME)/.openwrt_shared_host/bin/pkgconf"; \
+	install -m0755 "$$$$pkgconf_src" "$(STAGING_DIR_HOST)/bin/pkg-config.real"
 	$(INSTALL_BIN) ./files/pkg-config $(STAGING_DIR_HOST)/bin/pkg-config
 endef
 
