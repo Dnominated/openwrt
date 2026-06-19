@@ -173,7 +173,7 @@
 
 		partition@600000 {
 			label = "ubi";
-			reg = <0x600000 0x2800000>;
+			reg = <0x600000 0x4000000>;
 			sercomm,scpart-id = <3>;
 		};
 
